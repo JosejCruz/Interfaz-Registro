@@ -1,0 +1,132 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.grid-container{
+    box-shadow: -1px 1px 7px 0px #000;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+}
+.inputs-ci{
+    grid-area: inputs-ci;
+}
+.inputs-date{
+    grid-area: inputs-date;
+}
+.btn-search{
+    grid-area: btn-search;
+}
+.inputs-name{
+    grid-area: inputs-name;
+}
+.inputs-firts-name{
+    grid-area: inputs-firts-name;
+}
+.inputs-second-name{
+    grid-area: inputs-second-name;
+}
+.select{
+    grid-area: select;
+}
+.inputs-direction{
+    grid-area: inputs-direction;
+}
+.inputs-number{
+    grid-area: inputs-number;
+}
+.inputs-email{
+    grid-area: inputs-email;
+}
+.inputs-person{
+    grid-area: inputs-person;
+}
+.textarea{
+    grid-area: textarea;
+}
+.btn-save{
+    grid-area: btn-save;
+}
+.btn-cancel{
+    grid-area: btn-cancel;
+}
+.grid-container{
+    display: grid;
+    gap: 15px;
+    grid-template-areas: 
+    "inputs-ci"
+    "inputs-date"
+    "btn-search"
+    "inputs-name"
+    "inputs-firts-name"
+    "inputs-second-name"
+    "select"
+    "inputs-direction"
+    "inputs-number"
+    "inputs-email"
+    "inputs-person"
+    "textarea"
+    "btn-save"
+    "btn-cancel";
+}
+input[type="text"], input[type="date"], input[type="email"], textarea, select{
+    background-color: #fdfdfd;
+    font-size: 18px;
+	color: #000;
+	padding-top: 15px;
+	border: none;
+    border-radius: 2px;
+    border-bottom: solid #b6b6b6;
+	outline: 5px;
+}
+
+.btn-search{
+    border-radius: 20px;
+    border: none;
+    background-color: #23bb32;
+    color: white;
+    align-items: flex-start;
+    padding: 12px 60px;
+    gap: 10px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+}
+.btn-save{
+    border-radius: 20px;
+    border: none;
+    background-color: #0066FF;
+    color: white;
+    align-items: flex-start;
+    padding: 12px 60px;
+    gap: 10px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+}
+.btn-cancel{
+    border-radius: 20px;
+    border: none;
+    background-color: #FF0000;
+    color: white;
+    align-items: flex-start;
+    padding: 12px 60px;
+    gap: 10px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+}
+ion-icon {
+    font-size: 25px;
+    vertical-align: bottom;
+  }
+
+  @media screen and (min-width: 600px) {
+    .grid-conteiner{
+        background-color: #23bb32;
+    }
+}
