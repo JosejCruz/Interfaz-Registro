@@ -1,9 +1,33 @@
 //import "../css/Registro.css"
 //import {IonIcon} from "react-ion-icon";
 
+import { useState } from "react";
+import PantallaEspera from "./PantallaEspera";
+
 export default function RegitroPaciente(){
+    const [Estado, SetEstado] = useState(false);
+    const CambiarEstado = () => {
+        SetEstado(true);
+        setTimeout(() => {
+            SetEstado(false)
+        }, 5000);
+        /*
+        codigo de respuesta de a API
+        */
+    }
     return (
+        <>
         <div className="container mt-3">
+            <div className="row">
+                <div className="col-sm-4 col-md-2 col-lg-2 mb-4">
+                    <button className="btn">
+                        <ion-icon name="arrow-back-circle"></ion-icon>
+                    </button>
+                </div>
+                <div className="col-sm-8 col-md-10 col-lg-10 mb-4">
+                    <h1 className="text-center">Pre - Registro</h1>
+                </div>
+            </div>
             <div className="row">
                 <div className="form-floating col-sm-12 col-md-4 col-lg-4">
                     <input type="text" className="form-control mb-2" placeholder="C.I." required/>
@@ -57,13 +81,15 @@ export default function RegitroPaciente(){
                     <textarea className="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Nota"></textarea>
                 </div>
                 <div className="col-sm-12 col-md-4 col-lg-3 d-grid gap-2">
-                    <button className="btn btn-primary mb-2"><ion-icon name="save-outline"></ion-icon> Guardar</button>
+                    <button className="btn btn-primary mb-2" onClick={CambiarEstado}><ion-icon name="save-outline"></ion-icon> Guardar</button>
                 </div>
                 <div className="col-sm-12 col-md-4 col-lg-3 d-grid gap-2">
                     <button className="btn btn-danger  mb-2"><ion-icon name="ban-outline"></ion-icon> Cancelar</button>
                 </div>
             </div>
         </div>
+        {Estado&&<PantallaEspera/>}
+        </>
     ); 
 }
 

@@ -1,10 +1,14 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
+import PantallaEspera from './views/PantallaEspera'
 //import './App.css'
 import Registro from './views/Registro'
 
 function App() {
-  return <Registro/>
+  //const [Enviando] = useState(false)
+  return (
+    <Registro/>
+  )
 }
 
 export default App
