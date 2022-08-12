@@ -4,9 +4,11 @@
 import { useState } from "react";
 import PantallaEspera from "./PantallaEspera";
 import EfectoEspera from "./EfectoEspera";
+import EfectoSucces from "./EfectoSuccess";
 
 export default function RegitroPaciente(){
     const [Estado, SetEstado] = useState(false);
+    const [Estado2, SetEstado2] = useState(false);
     const CambiarEstado = () => {
         SetEstado(true);
         setTimeout(() => {
@@ -16,6 +18,17 @@ export default function RegitroPaciente(){
         codigo de respuesta de a API
         */
     }
+
+    const CambiarEstado2 = () => {
+        SetEstado2(true);
+        setTimeout(() => {
+            SetEstado2(false)
+        }, 5000);
+        /*
+        codigo de respuesta de a API
+        */
+    }
+
     return (
         <>
         <div className="container mt-3">
@@ -85,11 +98,12 @@ export default function RegitroPaciente(){
                     <button className="btn btn-primary mb-2" onClick={CambiarEstado}><ion-icon name="save-outline"></ion-icon> Guardar</button>
                 </div>
                 <div className="col-sm-12 col-md-4 col-lg-3 d-grid gap-2">
-                    <button className="btn btn-danger  mb-2"><ion-icon name="ban-outline"></ion-icon> Cancelar</button>
+                    <button className="btn btn-danger  mb-2" onClick={CambiarEstado2}><ion-icon name="ban-outline"></ion-icon> Cancelar</button>
                 </div>
             </div>
         </div>
         {Estado&&<EfectoEspera/>}
+        {Estado2&&<EfectoSucces/>}
         </>
     ); 
 }
