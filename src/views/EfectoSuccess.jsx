@@ -16,6 +16,7 @@ export default function EfectoSucces() {
 
   return (
     <div>
+      <button onClick={notify}>Notify!</button>
       <ToastContainer
         position="bottom-center"
         autoClose={5000}
