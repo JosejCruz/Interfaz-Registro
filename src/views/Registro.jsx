@@ -3,6 +3,7 @@
 
 import { useState } from "react";
 import PantallaEspera from "./PantallaEspera";
+import EfectoEspera from "./EfectoEspera";
 
 export default function RegitroPaciente(){
     const [Estado, SetEstado] = useState(false);
@@ -88,7 +89,7 @@ export default function RegitroPaciente(){
                 </div>
             </div>
         </div>
-        {Estado&&<PantallaEspera/>}
+        {Estado&&<EfectoEspera/>}
         </>
     ); 
 }
