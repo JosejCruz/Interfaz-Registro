@@ -4,8 +4,8 @@ import {Pacientejson} from '../interfaces/Paciente'
 import {Medicojson} from '../interfaces/Medico'
 import {Segurojson} from '../interfaces/Seguro'
 import {Ingresojson} from '../interfaces/Ingreso'
-import { useState } from "react";
-import PantallaEspera from "./PantallaEspera";
+import { useEffect, useState } from "react";
+
 import EfectoEspera from "./EfectoEspera";
 import EfectoSuccess from "./EfectoSuccess";
 
@@ -71,18 +71,20 @@ export default function RegitroPaciente(){
         setPaciente(newPaciente)
         setMedico(newMedico)
         setSeguro(newSeguro)
+        
+    }
+    useEffect(() => {
         const newIngreso = {
-          Paciente: Paciente,
-          Medico: Medico,
-          Seguro: Seguro
-        };
+            Paciente: Paciente,
+            Medico: Medico,
+            Seguro: Seguro
+          }
         setIngreso(newIngreso)
-
         console.log(Paciente)
         console.log(Medico)
         console.log(Seguro)
         console.log(ingreso)
-    }
+    }, [Seguro])
 
 
     return (
