@@ -16,6 +16,7 @@ export default function EfectoSuccess() {
 
   return (
     <div>
+      <button onClick={notify}>Notify!</button>
       <ToastContainer
         position="bottom-center"
         autoClose={5000}
@@ -32,5 +33,9 @@ export default function EfectoSuccess() {
 }
 
 
+
 //<button onClick={notify}>Notificación</button>
 //para las notificaciones https://www.npmjs.com/package/react-toastify
+
+//para las notificaciones https://www.npmjs.com/package/react-toastify
+
